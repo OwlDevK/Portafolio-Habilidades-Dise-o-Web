@@ -1,0 +1,334 @@
+/*General*/
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    background-color: #0B1D26;
+}
+
+[class*="subtitle"]::before{
+    content:" ";
+    display: inline-block;
+    height: 1px;
+    width: 4rem;
+    background: #FBD784;
+    vertical-align: middle;
+    margin-right: 1.5rem;
+    margin-bottom: 0.2%;
+}
+
+[class*="subtitle"]{
+    color: #FBD784;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: .9em;
+    font-weight: 400;
+}
+
+.logo{
+    font-size: 2rem;
+}
+
+
+
+/* ∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞*/
+/* --------------------------------------------------------------------- HEADER -------------------------------------------------------------------------*/
+/* ∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞*/
+
+.header__parallaxImages{
+    background-color: #FBD784;
+
+}
+
+
+.header__parallaxImages > :nth-child(n){
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+
+.HG{
+    background: url(../imagenes/HG.png);
+    height: 100vh;
+    background-attachment: fixed;
+    box-shadow: 24px 148px 400px 200px rgba(53,65,71,1) inset;
+    -webkit-box-shadow: 24px 148px 400px 200px rgba(53,65,71,1) inset;
+    -moz-box-shadow: 24px 148px 400px 200px rgba(53,65,71,1) inset;
+}
+
+.MG{    
+    background: url(../imagenes/MG.png);
+    background-attachment: scroll;
+    height: 100vh;
+    margin-top: -50vh;
+
+    z-index: 2;
+}
+
+.VG{
+    background: linear-gradient(0deg, #0B1D26, transparent), url(../imagenes/VG.png);
+    background-attachment: scroll;
+    height: 82vh;
+    margin-top: -72vh;
+
+    z-index: -1;
+    
+}
+
+
+/* ∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞*/
+/* ----------------------------------------------------------------- HEADER NAV BAR ---------------------------------------------------------------------*/
+/* ∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞*/
+
+
+.header a{
+    text-decoration: none;
+    color: white;
+}
+
+.header__navSect{
+    position: absolute;
+    top: 0;
+    height: 3em;
+    width: 1200px;
+    margin: 4% calc(1200px * 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header__navSect .nav{
+    width: 23%;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.header__nav--link{
+    border-bottom: solid 3px rgb(255, 255, 255, 0%);
+    line-height: 1.5em;
+    padding: 0 0.7em;
+}
+
+.fa-circle-user{
+    margin-right: 1em;
+}
+
+/* HEADER NAV BAR: Animaciones */
+
+[class*="nav--link"]:hover{
+    transition: 1s;
+    color: rgb(251, 215, 132);  
+}
+
+.header__nav--link:hover{
+    border-bottom: solid 2px  rgb(251, 215, 132, 100%);
+}
+
+
+/* ∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞*/
+/* ------------------------------------------------------------------- HERO SECTION ---------------------------------------------------------------------*/
+/* ∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞*/
+
+
+.hero{
+    position: absolute;
+    height: 40%;
+    width: 1200px;
+    top: 24%; 
+    left: calc(1200px * 0.1);
+}
+
+.hero .container{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+.hero__aside--left{
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: space-between;
+    height: 46%;
+    font-weight: bold;
+}
+
+.hero__principal{
+    width: 55%;
+    align-self: center;
+}
+
+
+
+.hero__principal--title{
+    font-size: 4em;
+    line-height: 1.1em;
+    margin: 5% 0;
+    box-sizing: border-box;
+}
+
+
+.hero__principal--suggestion{
+    width: 3em;
+    text-decoration: none;
+    align-items: center;
+    color: white;
+}
+
+.fa-arrow-down-long{
+    margin-left: 1em;
+    font-size: 1.2em;
+}
+
+.hero__aside--rigth{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 3em;
+}
+
+.hero__aside--rigth>:nth-child(n){
+    border-right: 4px solid rgba(255, 255, 255, 0.487);
+    padding-right: 2em;
+
+}
+
+.hero__aside--rigth>:first-child{
+    border-right: 4px solid rgb(255, 255, 255);
+}
+
+
+/* ∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞*/
+/* ------------------------------------------------------------------- MAIN SECTION ---------------------------------------------------------------------*/
+/* ∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞*/
+
+
+
+.main{
+    /* background-image: linear-gradient(0deg,#0B1D26, transparent); */
+    margin-top: -9em;
+    z-index: 100;
+}
+
+.main__container{
+    margin: 0 calc(1200px * 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 111em;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+
+.main__section{
+    height: 32em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main__section:nth-child(odd){
+    flex-direction: row-reverse;
+    padding-left: 8em;
+}
+
+.main__section__textBox{
+    width: 45.5%;
+    align-content: center;
+}
+
+.main__sect--title{
+    font-size: 2.5em;
+    line-height: 1.2em;
+    margin: 0.5em 0;
+}
+
+.main--image{
+    height: 100%;
+
+}
+
+
+.main__sect--link{
+    text-decoration: none;
+    color: #FBD784;
+    line-height: 3em;
+}
+
+.fa-arrow-right-long{
+    margin-left: 1em;
+}
+
+
+/* ∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞*/
+/* ---------------------------------------------------------------------- FOOTER ------------------------------------------------------------------------*/
+/* ∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞*/
+
+.footer__container{
+    margin: 13% calc(1200px * 0.1);
+    display: flex;
+    justify-content: space-around;
+    font-size: 1em;
+    height: 38vh;
+    line-height: 1.5em;
+    font-weight: 100;
+}
+
+.footer__sect--left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 43%;
+    height: 90%;
+}
+
+.footer__sect--left__textBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    height: 48%;
+}
+
+
+.footer__sect--rigth{
+    display: flex;
+    width: 34%;
+    justify-content: space-between;
+}
+
+.copy{
+    font-size: 0.8em;
+    color: gray;
+}
+
+
+.footer__sect--rigth >:nth-child(n){
+    display: flex;
+    flex-direction: column;
+    line-height: 2.7em;
+}
+
+.footer__sect--rigth--title{
+    color: #FBD784;
+    font-size: 1.1em;
+}
+
+.footer--link{
+    text-decoration: none;
+    color: white;
+    font-size: .8em;
+    font-weight: 0;
+}
+
